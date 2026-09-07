@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choco Sueños</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+  <div class="decor decor-1">♡</div>
+  <div class="decor decor-2">✦</div>
+  <div class="decor decor-3">♡</div>
+  <div class="decor decor-4">♡</div>
+
+  <header class="topbar">
+    <div class="mini-brand">Choco <span>Sueños</span></div>
+    <button class="sound-btn" id="soundBtn" aria-label="Activar o desactivar sonido">🔊</button>
+  </header>
+
+  <main class="scene">
+    <section class="intro">
+      <p class="eyebrow">CHOCO CATÁLOGO</p>
+      <h1>Un pequeño libro<br><em>hecho de chocolate</em></h1>
+      <p class="intro-text">Haz clic en la portada para comenzar a descubrir nuestras chocotejas.</p>
+    </section>
+
+    <div class="book-wrap">
+      <div class="book" id="book">
+
+        <!-- PORTADA -->
+        <div class="page cover-page" id="cover">
+          <div class="cover-inner">
+            <div class="crown">♛</div>
+            <p class="small-title">CHOCOLATE ARTESANAL</p>
+            <h2>Choco</h2>
+            <div class="script">Sueños</div>
+            <div class="ornament">♡ ───────── ♡</div>
+            <p class="cover-title">CHOCOTEJAS</p>
+            <p class="cover-subtitle">dulce y sabores unicos</p>
+
+            <div class="cover-chocolates">
+              <div class="fake-choco choco-left">♡</div>
+              <div class="fake-choco choco-center">★</div>
+              <div class="fake-choco choco-right">♡</div>
+            </div>
+
+            <div class="cover-ribbon">HECHAS CON AMOR</div>
+            <button class="open-btn" onclick="nextPage()">ABRIR CATÁLOGO <span>→</span></button>
+          </div>
+        </div>
+
+        <!-- PÁGINA 1 -->
+        <div class="page page-cream">
+          <div class="page-content">
+            <span class="page-number">01</span>
+            <p class="section-label">BIENVENIDOS</p>
+            <h2>Endulzamos<br><em>tus momentos</em></h2>
+            <p class="lead">Chocotejas artesanales preparadas para regalar, compartir y disfrutar.</p>
+
+            <div class="feature-grid">
+              <article>
+                <div class="feature-icon">♡</div>
+                <h3>Hechas con amor</h3>
+                <p>Cada detalle está pensado para que tu regalo sea especial.</p>
+              </article>
+              <article>
+                <div class="feature-icon">✦</div>
+                <h3>Ingredientes de calidad</h3>
+                <p>Chocolate y rellenos seleccionados para un sabor delicioso.</p>
+              </article>
+              <article>
+                <div class="feature-icon">♧</div>
+                <h3>Receta artesanal</h3>
+                <p>Elaboradas con cuidado, dedicación y mucha creatividad.</p>
+              </article>
+              <article>
+                <div class="feature-icon">🎁</div>
+                <h3>Para regalar</h3>
+                <p>Presentaciones bonitas para cumpleaños, detalles y celebraciones.</p>
+              </article>
+            </div>
+
+            <div class="quote">“Un detalle pequeño puede convertirse<br>en un recuerdo enorme.”</div>
+          </div>
+        </div>
+
+        <!-- PÁGINA 2 -->
+        <div class="page page-white">
+          <div class="page-content">
+            <span class="page-number">02</span>
+            <p class="section-label">NUESTROS SABORES</p>
+            <h2>Rellenos que<br><em>enamoran</em></h2>
+
+            <div class="product-grid">
+              <article class="product-card">
+                <div class="product-photo photo-mani"><span>🥜</span></div>
+                <h3>Maní</h3>
+                <p>Manjar + maní tostado</p>
+                <strong>S/ 2.00</strong>
+              </article>
+              <article class="product-card">
+                <div class="product-photo photo-pasas"><span>🍇</span></div>
+                <h3>Pasas</h3>
+                <p>Manjar + pasas</p>
+                <strong>S/ 2.00</strong>
+              </article>
+              <article class="product-card">
+                <div class="product-photo photo-gomitas"><span>🧸</span></div>
+                <h3>Gomitas</h3>
+                <p>Manjar + gomitas</p>
+                <strong>S/ 2.00</strong>
+              </article>
+              <article class="product-card">
+                <div class="product-photo photo-oreo"><span>🍪</span></div>
+                <h3>Oreo</h3>
+                <p>Manjar + Oreo</p>
+                <strong>S/ 2.00</strong>
+              </article>
+              <article class="product-card">
+                <div class="product-photo photo-chinchin"><span>●●●</span></div>
+                <h3>Chinchín</h3>
+                <p>Manjar + chinchín</p>
+                <strong>S/ 2.00</strong>
+              </article>
+              <article class="product-card">
+                <div class="product-photo photo-coco"><span>🥥</span></div>
+                <h3>Coco</h3>
+                <p>Manjar + coco rallado</p>
+                <strong>S/ 2.00</strong>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- PÁGINA 3 -->
+        <div class="page page-cream">
+          <div class="page-content">
+            <span class="page-number">03</span>
+            <p class="section-label">TAMAÑOS Y FORMAS</p>
+            <h2>Elige tu<br><em>favorito</em></h2>
+
+            <div class="sizes">
+              <article class="size-card">
+                <div class="shape oval">♡</div>
+                <div><h3>Normal</h3><p>La clásica para disfrutar.</p></div>
+                <strong>S/ 2.00</strong>
+              </article>
+              <article class="size-card">
+                <div class="shape square">✦</div>
+                <div><h3>Cuadrado</h3><p>Una presentación diferente.</p></div>
+                <strong>S/ 2.50</strong>
+              </article>
+              <article class="size-card">
+                <div class="shape circle">♡</div>
+                <div><h3>Circular</h3><p>Perfecta para compartir.</p></div>
+                <strong>S/ 2.50</strong>
+              </article>
+              <article class="size-card">
+                <div class="shape heart">♥</div>
+                <div><h3>Corazón mini</h3><p>Un detalle tierno y especial.</p></div>
+                <strong>2 x S/ 2.50</strong>
+              </article>
+              <article class="size-card">
+                <div class="shape kitty">★</div>
+                <div><h3>Especial</h3><p>Diseños personalizados.</p></div>
+                <strong>Consultar</strong>
+              </article>
+            </div>
+
+            <p class="note">* Los precios y diseños pueden editarse según tu emprendimiento.</p>
+          </div>
+        </div>
+
+        <!-- PÁGINA 4 -->
+        <div class="page page-white">
+          <div class="page-content">
+            <span class="page-number">04</span>
+            <p class="section-label">PRESENTACIONES</p>
+            <h2>Regala algo<br><em>delicioso</em></h2>
+
+            <div class="boxes">
+              <article class="box-card">
+                <div class="gift-box">
+                  <div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <h3>Caja x 6</h3>
+                <p>Ideal para regalar</p>
+                <strong>S/ 12.00</strong>
+              </article>
+              <article class="box-card featured">
+                <div class="gift-box big">
+                  <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <h3>Box x 12</h3>
+                <p>Perfecta para compartir</p>
+                <strong>S/ 24.00</strong>
+              </article>
+              <article class="box-card">
+                <div class="gift-box">
+                  <div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <h3>Box x 24</h3>
+                <p>Para los amantes del chocolate</p>
+                <strong>S/ 48.00</strong>
+              </article>
+            </div>
+
+            <div class="custom-banner">
+              <span>🎀</span>
+              <div><b>¿Quieres una presentación especial?</b><br>Podemos adaptar tu pedido para una ocasión especial.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTRAPORTADA -->
+        <div class="page back-page">
+          <div class="back-inner">
+            <div class="crown">♛</div>
+            <h2>ROMA</h2>
+            <div class="script">Chocolates</div>
+            <p class="back-message">Gracias por elegir<br>nuestro pequeño emprendimiento.</p>
+            <div class="contact-box">
+              <p>📱 WhatsApp</p>
+              <strong>922 866 922</strong>
+              <p>📍 Lima, Perú</p>
+              <p>📸 @roma.chocolates</p>
+            </div>
+            <p class="final-line">Chocotejas hechas con amor ♡</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="prevPage()">← Anterior</button>
+      <div class="dots" id="dots"></div>
+      <button id="nextBtn" onclick="nextPage()">Siguiente →</button>
+    </div>
+
+    <p class="hint">También puedes usar las teclas ← → del teclado.</p>
+  </main>
+
+  <footer>
+    <span>ROMA Chocolates</span> · Catálogo digital editable
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
