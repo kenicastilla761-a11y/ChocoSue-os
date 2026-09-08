@@ -1,282 +1,894 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choco Sueños</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Choco Sueños | Catálogo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <div class="decor decor-1">♡</div>
-  <div class="decor decor-2">✦</div>
-  <div class="decor decor-3">♡</div>
-  <div class="decor decor-4">♡</div>
+    <!-- FONDO -->
+    <div class="fondo">
 
-  <header class="topbar">
-    <div class="mini-brand">Choco <span>Sueños</span></div>
-    <button class="sound-btn" id="soundBtn" aria-label="Activar o desactivar sonido">🔊</button>
-  </header>
+        <div class="decoracion d1">🍫</div>
+        <div class="decoracion d2">🍓</div>
+        <div class="decoracion d3">✨</div>
+        <div class="decoracion d4">🤎</div>
 
-  <main class="scene">
-    <section class="intro">
-      <p class="eyebrow">CHOCO CATÁLOGO</p>
-      <h1>Un pequeño libro<br><em>hecho de chocolate</em></h1>
-      <p class="intro-text">Haz clic en la portada para comenzar a descubrir nuestras chocotejas.</p>
-    </section>
 
-    <div class="book-wrap">
-      <div class="book" id="book">
+        <!-- LIBRO -->
+        <div class="libro">
 
-        <!-- PORTADA -->
-        <div class="page cover-page" id="cover">
-          <div class="cover-inner">
-            <div class="crown">♛</div>
-            <p class="small-title">CHOCOLATE ARTESANAL</p>
-            <h2>Choco</h2>
-            <div class="script">Sueños</div>
-            <div class="ornament">♡ ───────── ♡</div>
-            <p class="cover-title">CHOCOTEJAS</p>
-            <p class="cover-subtitle">dulce y sabores unicos</p>
 
-            <div class="cover-chocolates">
-              <div class="fake-choco choco-left">♡</div>
-              <div class="fake-choco choco-center">★</div>
-              <div class="fake-choco choco-right">♡</div>
-            </div>
+            <!-- =========================
+                 HOJA 1 - PORTADA
+            ========================== -->
 
-            <div class="cover-ribbon">HECHAS CON AMOR</div>
-            <button class="open-btn" onclick="nextPage()">ABRIR CATÁLOGO <span>→</span></button>
-          </div>
-        </div>
+            <section class="pagina portada">
 
-        <!-- PÁGINA 1 -->
-        <div class="page page-cream">
-          <div class="page-content">
-            <span class="page-number">01</span>
-            <p class="section-label">BIENVENIDOS</p>
-            <h2>Endulzamos<br><em>tus momentos</em></h2>
-            <p class="lead">Chocotejas artesanales preparadas para regalar, compartir y disfrutar.</p>
+                <div class="adorno estrella">✦</div>
 
-            <div class="feature-grid">
-              <article>
-                <div class="feature-icon">♡</div>
-                <h3>Hechas con amor</h3>
-                <p>Cada detalle está pensado para que tu regalo sea especial.</p>
-              </article>
-              <article>
-                <div class="feature-icon">✦</div>
-                <h3>Ingredientes de calidad</h3>
-                <p>Chocolate y rellenos seleccionados para un sabor delicioso.</p>
-              </article>
-              <article>
-                <div class="feature-icon">♧</div>
-                <h3>Receta artesanal</h3>
-                <p>Elaboradas con cuidado, dedicación y mucha creatividad.</p>
-              </article>
-              <article>
-                <div class="feature-icon">🎁</div>
-                <h3>Para regalar</h3>
-                <p>Presentaciones bonitas para cumpleaños, detalles y celebraciones.</p>
-              </article>
-            </div>
+                <div class="portada-contenido">
 
-            <div class="quote">“Un detalle pequeño puede convertirse<br>en un recuerdo enorme.”</div>
-          </div>
-        </div>
+                    <p class="pequeno">CATÁLOGO ESPECIAL</p>
 
-        <!-- PÁGINA 2 -->
-        <div class="page page-white">
-          <div class="page-content">
-            <span class="page-number">02</span>
-            <p class="section-label">NUESTROS SABORES</p>
-            <h2>Rellenos que<br><em>enamoran</em></h2>
+                    <h1>
+                        Choco
+                        <span>Sueños</span>
+                    </h1>
 
-            <div class="product-grid">
-              <article class="product-card">
-                <div class="https://www.saborusa.com/wp-content/uploads/2019/10/7-poderosas-razones-para-comer-mani-Foto-destacada.png"><span>🥜</span></div>
-                <h3>Maní</h3>
-                <p>Manjar + maní tostado</p>
-                <strong>S/ 2.00</strong>
-              </article>
-              <article class="product-card">
-                <div class="https://image.tuasaude.com/media/article/sl/yb/beneficios-de-las-pasas_60610.jpg"><span>🍇</span></div>
-                <p>Manjar + pasas</p>
-                <strong>S/ 2.00</strong>
-              </article>
-              <article class="product-card">
-                <div class="https://thefoodtech.com/wp-content/uploads/2022/05/gomitas.jpeg"><span>🧸</span></div>
-                <h3>Gomitas</h3>
-                <p>Manjar + gomitas</p>
-                <strong>S/ 2.00</strong>
-              </article>
-              <article class="product-card">
-                <div class="https://www.pediatriamildias.com/wp-content/uploads/2022/09/Blog53.jpg"><span>🍪</span></div>
-                <h3>Oreo</h3>
-                <p>Manjar + Oreo</p>
-                <strong>S/ 2.00</strong>
-              </article>
-              <article class="product-card">
-                <div class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHDhkB0fca7lsHpasVwpzj9FTJTt6jsz_GryXYqDchqI0qJZpuRRWcL72N&s=10"><span>●●●</span></div>
-                <h3>Chinchín</h3>
-                <p>Manjar + chinchín</p>
-                <strong>S/ 2.00</strong>
-              </article>
-              <article class="product-card">
-                <div class="https://meditts.com/wp-content/uploads/2025/04/Coco-rallado-y-deshidratado.jpg"><span>🥥</span></div>
-                <h3>Coco</h3>
-                <p>Manjar + coco rallado</p>
-                <strong>S/ 2.00</strong>
-              </article>
-                <article class="product-card">
-                <div class="https://previews.123rf.com/images/hansgeel/hansgeel1612/hansgeel161200030/69220256-jar-with-homemade-passion-fruit-and-plum-jam-with-fresh-plums-and-passion-fruit.jpg"><span>●●●</span></div>
-                <h3>Jalea de maracuya</h3>
-                <p>Jalea de maracuya</p>
-                <strong>S/ 2.00</strong>
-              </article>
-              <article class="product-card">
-                <div class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIpCho9shRSKcygxLcrYeV33mybfuRAMuqxfgKQFJx6E7T3hmGU_DGG3U&s=10"><span>●●●</span></div>
-                <h3>Jalea de fresa</h3>
-                <p>Jalea de fresa</p>
-                <strong>S/ 2.00</strong>
-              </article>
-              <article class="product-card">
-                <div class="https://www.salysol.com/wp-content/uploads/2021/01/AdobeStock_232241997-scaled-e1610625687166.jpeg"><span>●●●</span></div>
-                <h3>Piztacho</h3>
-                <p>Piztaño</p>
-                <strong>S/ 2.00</strong>
-              </article><article class="product-card">
-                <div class="https://cdn.bolivia.com/sdi/2018/04/19/como-preparar-el-mejor-queque-de-vainilla-628390.jpg"><span>●●●</span></div>
-                <h3>Keke</h3>
-                <p>Keke</p>
-                <strong>S/ 2.00</strong>
-              </article>
-              </article><article class="product-card">
-                <div class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOefOgC8h1te1IIHiOk0dzD2jSPnbByOwmRtO39uUKr2JHzpAMoSOtfBc&s=10"><span>●●●</span></div>
-                <h3>Grajea</h3>
-                <p>Grajea</p>
-                <strong>S/ 2.00</strong>
-              </article>
-            </div>
-          </div>
-        </div>
+                    <p class="frase">
+                        Dulces momentos hechos con amor
+                    </p>
 
-        <!-- PÁGINA 3 -->
-        <div class="page page-cream">
-          <div class="page-content">
-            <span class="page-number">03</span>
-            <p class="section-label">TAMAÑOS Y FORMAS</p>
-            <h2>Elige tu<br><em>favorito</em></h2>
+                    <div class="foto-portada">
+                        <img src="imagenes/portada.jpg" alt="Choco Sueños">
+                    </div>
 
-            <div class="sizes">
-              <article class="size-card">
-                <div class="shape oval">♡</div>
-                <div><h3>Normal</h3><p>La clásica para disfrutar.</p></div>
-                <strong>S/ 2.00</strong>
-              </article>
-              <article class="size-card">
-                <div class="shape square">✦</div>
-                <div><h3>Cuadrado</h3><p>Una presentación diferente.</p></div>
-                <strong>S/ 2.50</strong>
-              </article>
-              <article class="size-card">
-                <div class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTatMnd4b0eDr33ov8rtjbTzxwHPykymCgqfOLQtxFRfQMBxTeel7ZlUq7e&s=10">♡</div>
-                <div><h3>Circular</h3><p>Perfecta para compartir.</p></div>
-                <strong>S/ 2.50</strong>
-              </article>
-              <article class="size-card">
-                <div class="shape heart">♥</div>
-                <div><h3>Corazón mini</h3><p>Un detalle tierno y especial.</p></div>
-                <strong>2 x S/ 2.50</strong>
-              </article>
-              <article class="size-card">
-                <div class="shape kitty">★</div>
-                <div><h3>Especial</h3><p>Diseños personalizados.</p></div>
-                <strong>Consultar</strong>
-              </article>
-            </div>
+                    <p class="subfrase">
+                        🍫 Chocotejas • Chocobombas • Dulces detalles 🍫
+                    </p>
 
-            <p class="note">* Los precios y diseños pueden editarse según tu emprendimiento.</p>
-          </div>
-        </div>
-
-        <!-- PÁGINA 4 -->
-        <div class="page page-white">
-          <div class="page-content">
-            <span class="page-number">04</span>
-            <p class="section-label">PRESENTACIONES</p>
-            <h2>Regala algo<br><em>delicioso</em></h2>
-
-            <div class="boxes">
-              <article class="box-card">
-                <div class="gift-box">
-                  <div></div><div></div><div></div><div></div><div></div><div></div>
                 </div>
-                <h3>Caja x 6</h3>
-                <p>Ideal para regalar</p>
-                <strong>S/ 12.00</strong>
-              </article>
-              <article class="box-card featured">
-                <div class="gift-box big">
-                  <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                </div>
-                <h3>Box x 12</h3>
-                <p>Perfecta para compartir</p>
-                <strong>S/ 24.00</strong>
-              </article>
-              <article class="box-card">
-                <div class="gift-box">
-                  <div></div><div></div><div></div><div></div><div></div><div></div>
-                </div>
-                <h3>Box x 24</h3>
-                <p>Para los amantes del chocolate</p>
-                <strong>S/ 48.00</strong>
-              </article>
-            </div>
 
-            <div class="custom-banner">
-              <span>🎀</span>
-              <div><b>¿Quieres una presentación especial?</b><br>Podemos adaptar tu pedido para una ocasión especial.</div>
-            </div>
-          </div>
+                <div class="numero">01</div>
+
+            </section>
+
+
+            <!-- =========================
+                 HOJA 2 - QUIENES SOMOS
+            ========================== -->
+
+            <section class="pagina">
+
+                <div class="encabezado">
+                    <span>02</span>
+                    <h2>¿Quiénes somos?</h2>
+                </div>
+
+                <div class="quienes">
+
+                    <div class="quienes-imagen">
+                        <img src="imagenes/quienes-somos.jpg"
+                             alt="Choco Sueños">
+                    </div>
+
+                    <div class="quienes-texto">
+
+                        <span class="mini-titulo">
+                            UN PEQUEÑO SUEÑO HECHO DULCE
+                        </span>
+
+                        <h3>
+                            Creamos momentos que
+                            saben a felicidad
+                        </h3>
+
+                        <p>
+                            En <strong>Choco Sueños</strong> creemos que
+                            los pequeños detalles pueden convertirse
+                            en grandes recuerdos.
+                        </p>
+
+                        <p>
+                            Elaboramos nuestras chocotejas y dulces
+                            con mucho cariño, buscando combinar
+                            sabores deliciosos, presentaciones bonitas
+                            y ese toque especial que hace sonreír.
+                        </p>
+
+                        <div class="frase-caja">
+                            “Cada dulce lleva un poquito de amor,
+                            creatividad y muchos sueños.”
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="numero">02</div>
+
+            </section>
+
+
+            <!-- =========================
+                 HOJA 3 - RELLENOS
+            ========================== -->
+
+            <section class="pagina">
+
+                <div class="encabezado centrado">
+                    <span>03</span>
+                    <h2>Rellenos</h2>
+                    <p>
+                        Elige tu combinación favorita
+                    </p>
+                </div>
+
+                <div class="grid-rellenos">
+
+                    <div class="producto">
+                        <div class="foto-cuadrada">
+                            <img src="imagenes/relleno1.jpg" alt="Relleno 1">
+                        </div>
+                        <h3>Relleno 01</h3>
+                    </div>
+
+                    <div class="producto">
+                        <div class="foto-cuadrada">
+                            <img src="imagenes/relleno2.jpg" alt="Relleno 2">
+                        </div>
+                        <h3>Relleno 02</h3>
+                    </div>
+
+                    <div class="producto">
+                        <div class="foto-cuadrada">
+                            <img src="imagenes/relleno3.jpg" alt="Relleno 3">
+                        </div>
+                        <h3>Relleno 03</h3>
+                    </div>
+
+                    <div class="producto">
+                        <div class="foto-cuadrada">
+                            <img src="imagenes/relleno4.jpg" alt="Relleno 4">
+                        </div>
+                        <h3>Relleno 04</h3>
+                    </div>
+
+                    <div class="producto">
+                        <div class="foto-cuadrada">
+                            <img src="imagenes/relleno5.jpg" alt="Relleno 5">
+                        </div>
+                        <h3>Relleno 05</h3>
+                    </div>
+
+                    <div class="producto">
+                        <div class="foto-cuadrada">
+                            <img src="imagenes/relleno6.jpg" alt="Relleno 6">
+                        </div>
+                        <h3>Relleno 06</h3>
+                    </div>
+
+                    <div class="producto">
+                        <div class="foto-cuadrada">
+                            <img src="imagenes/relleno7.jpg" alt="Relleno 7">
+                        </div>
+                        <h3>Relleno 07</h3>
+                    </div>
+
+                    <div class="producto">
+                        <div class="foto-cuadrada">
+                            <img src="imagenes/relleno8.jpg" alt="Relleno 8">
+                        </div>
+                        <h3>Relleno 08</h3>
+                    </div>
+
+                </div>
+
+                <div class="numero">03</div>
+
+            </section>
+
+
+            <!-- =========================
+                 HOJA 4 - FORMAS
+            ========================== -->
+
+            <section class="pagina">
+
+                <div class="encabezado centrado">
+                    <span>04</span>
+                    <h2>Formas</h2>
+                    <p>
+                        Porque un dulce también puede ser bonito
+                    </p>
+                </div>
+
+                <div class="grid-formas">
+
+                    <div class="forma">
+                        <div class="foto-forma">
+                            <img src="imagenes/forma1.jpg" alt="Forma 1">
+                        </div>
+                        <h3>Forma 01</h3>
+                    </div>
+
+                    <div class="forma">
+                        <div class="foto-forma">
+                            <img src="imagenes/forma2.jpg" alt="Forma 2">
+                        </div>
+                        <h3>Forma 02</h3>
+                    </div>
+
+                    <div class="forma">
+                        <div class="foto-forma">
+                            <img src="imagenes/forma3.jpg" alt="Forma 3">
+                        </div>
+                        <h3>Forma 03</h3>
+                    </div>
+
+                    <div class="forma">
+                        <div class="foto-forma">
+                            <img src="imagenes/forma4.jpg" alt="Forma 4">
+                        </div>
+                        <h3>Forma 04</h3>
+                    </div>
+
+                    <div class="forma">
+                        <div class="foto-forma">
+                            <img src="imagenes/forma5.jpg" alt="Forma 5">
+                        </div>
+                        <h3>Forma 05</h3>
+                    </div>
+
+                    <div class="forma">
+                        <div class="foto-forma">
+                            <img src="imagenes/forma6.jpg" alt="Forma 6">
+                        </div>
+                        <h3>Forma 06</h3>
+                    </div>
+
+                </div>
+
+                <div class="numero">04</div>
+
+            </section>
+
+
+            <!-- =========================
+                 HOJA 5 - PRECIOS
+            ========================== -->
+
+            <section class="pagina">
+
+                <div class="encabezado">
+                    <span>05</span>
+                    <h2>Nuestros precios</h2>
+                </div>
+
+                <div class="lista-precios">
+
+
+                    <!-- PRODUCTO PRECIO -->
+
+                    <div class="precio-item">
+
+                        <div class="foto-precio">
+                            <img src="imagenes/precio1.jpg" alt="Chocoteja">
+                        </div>
+
+                        <div class="foto-circular">
+                            <img src="imagenes/relleno1.jpg" alt="Relleno">
+                        </div>
+
+                        <div class="info-precio">
+                            <h3>Chocoteja Especial</h3>
+
+                            <p>
+                                Chocolate, relleno especial
+                                y decoración.
+                            </p>
+
+                            <span class="precio">
+                                S/ 3.00
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="precio-item">
+
+                        <div class="foto-precio">
+                            <img src="imagenes/precio2.jpg" alt="Chocoteja">
+                        </div>
+
+                        <div class="foto-circular">
+                            <img src="imagenes/relleno2.jpg" alt="Relleno">
+                        </div>
+
+                        <div class="info-precio">
+                            <h3>Chocoteja Clásica</h3>
+
+                            <p>
+                                Chocolate y delicioso
+                                relleno casero.
+                            </p>
+
+                            <span class="precio">
+                                S/ 3.00
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="precio-item">
+
+                        <div class="foto-precio">
+                            <img src="imagenes/precio3.jpg" alt="Chocoteja">
+                        </div>
+
+                        <div class="foto-circular">
+                            <img src="imagenes/relleno3.jpg" alt="Relleno">
+                        </div>
+
+                        <div class="info-precio">
+                            <h3>Chocoteja Premium</h3>
+
+                            <p>
+                                Chocolate, relleno premium
+                                y toppings.
+                            </p>
+
+                            <span class="precio">
+                                S/ 4.00
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="precio-item">
+
+                        <div class="foto-precio">
+                            <img src="imagenes/precio4.jpg" alt="Chocoteja">
+                        </div>
+
+                        <div class="foto-circular">
+                            <img src="imagenes/relleno4.jpg" alt="Relleno">
+                        </div>
+
+                        <div class="info-precio">
+                            <h3>Chocoteja Decorada</h3>
+
+                            <p>
+                                Chocolate, relleno y
+                                decoración personalizada.
+                            </p>
+
+                            <span class="precio">
+                                S/ 5.00
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="numero">05</div>
+
+            </section>
+
+
+            <!-- =========================
+                 HOJA 6 - CHOCOBOMBAS
+            ========================== -->
+
+            <section class="pagina">
+
+                <div class="encabezado centrado">
+                    <span>06</span>
+                    <h2>Chocobombas</h2>
+                    <p>
+                        ¡Una explosión de sabor!
+                    </p>
+                </div>
+
+
+                <div class="chocobombas">
+
+                    <!-- CHOCOBOMBA 1 -->
+
+                    <div class="chocobomba">
+
+                        <div class="foto-bomba">
+                            <img src="imagenes/chocobomba1.jpg"
+                                 alt="Chocobomba 1">
+                        </div>
+
+                        <div class="mini-bombas">
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba1a.jpg">
+                                </div>
+                                <p>Clásica</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba1b.jpg">
+                                </div>
+                                <p>Fresa</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba1c.jpg">
+                                </div>
+                                <p>Oreo</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba1d.jpg">
+                                </div>
+                                <p>Vainilla</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba1e.jpg">
+                                </div>
+                                <p>Especial</p>
+                            </div>
+
+                        </div>
+
+                        <h3>Chocobomba 01</h3>
+
+                    </div>
+
+
+                    <!-- CHOCOBOMBA 2 -->
+
+                    <div class="chocobomba">
+
+                        <div class="foto-bomba">
+                            <img src="imagenes/chocobomba2.jpg"
+                                 alt="Chocobomba 2">
+                        </div>
+
+                        <div class="mini-bombas">
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba2a.jpg">
+                                </div>
+                                <p>Clásica</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba2b.jpg">
+                                </div>
+                                <p>Fresa</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba2c.jpg">
+                                </div>
+                                <p>Oreo</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba2d.jpg">
+                                </div>
+                                <p>Vainilla</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba2e.jpg">
+                                </div>
+                                <p>Especial</p>
+                            </div>
+
+                        </div>
+
+                        <h3>Chocobomba 02</h3>
+
+                    </div>
+
+
+                    <!-- CHOCOBOMBA 3 -->
+
+                    <div class="chocobomba">
+
+                        <div class="foto-bomba">
+                            <img src="imagenes/chocobomba3.jpg"
+                                 alt="Chocobomba 3">
+                        </div>
+
+                        <div class="mini-bombas">
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba3a.jpg">
+                                </div>
+                                <p>Clásica</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba3b.jpg">
+                                </div>
+                                <p>Fresa</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba3c.jpg">
+                                </div>
+                                <p>Oreo</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba3d.jpg">
+                                </div>
+                                <p>Vainilla</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba3e.jpg">
+                                </div>
+                                <p>Especial</p>
+                            </div>
+
+                        </div>
+
+                        <h3>Chocobomba 03</h3>
+
+                    </div>
+
+
+                    <!-- CHOCOBOMBA 4 -->
+
+                    <div class="chocobomba">
+
+                        <div class="foto-bomba">
+                            <img src="imagenes/chocobomba4.jpg"
+                                 alt="Chocobomba 4">
+                        </div>
+
+                        <div class="mini-bombas">
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba4a.jpg">
+                                </div>
+                                <p>Clásica</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba4b.jpg">
+                                </div>
+                                <p>Fresa</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba4c.jpg">
+                                </div>
+                                <p>Oreo</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba4d.jpg">
+                                </div>
+                                <p>Vainilla</p>
+                            </div>
+
+                            <div>
+                                <div class="circulo">
+                                    <img src="imagenes/bomba4e.jpg">
+                                </div>
+                                <p>Especial</p>
+                            </div>
+
+                        </div>
+
+                        <h3>Chocobomba 04</h3>
+
+                    </div>
+
+                </div>
+
+                <div class="numero">06</div>
+
+            </section>
+
+
+            <!-- =========================
+                 HOJA 7 - GALERIA
+            ========================== -->
+
+            <section class="pagina">
+
+                <div class="encabezado centrado">
+                    <span>07</span>
+                    <h2>Nuestros dulces</h2>
+                    <p>
+                        Hechos para compartir momentos especiales
+                    </p>
+                </div>
+
+
+                <div class="galeria">
+
+                    <div class="galeria-item grande">
+                        <img src="imagenes/galeria1.jpg">
+                        <div>
+                            <h3>Un dulce detalle</h3>
+                            <p>
+                                Perfecto para regalar y sorprender.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="galeria-item">
+                        <img src="imagenes/galeria2.jpg">
+                        <div>
+                            <h3>Hecho con amor</h3>
+                            <p>
+                                Cada detalle es preparado
+                                cuidadosamente.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="galeria-item">
+                        <img src="imagenes/galeria3.jpg">
+                        <div>
+                            <h3>Para compartir</h3>
+                            <p>
+                                Sabores que alegran cualquier ocasión.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="galeria-item">
+                        <img src="imagenes/galeria4.jpg">
+                        <div>
+                            <h3>Momentos dulces</h3>
+                            <p>
+                                Una pequeña sorpresa puede
+                                hacer un gran día.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="galeria-item">
+                        <img src="imagenes/galeria5.jpg">
+                        <div>
+                            <h3>Tu favorito</h3>
+                            <p>
+                                Escoge el sabor que más te guste.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="numero">07</div>
+
+            </section>
+
+
+            <!-- =========================
+                 HOJA 8 - ESPECIAL
+            ========================== -->
+
+            <section class="pagina">
+
+                <div class="encabezado centrado">
+                    <span>08</span>
+                    <h2>Momentos especiales</h2>
+                    <p>
+                        Dulces para cada ocasión
+                    </p>
+                </div>
+
+
+                <!-- DOS ARRIBA -->
+
+                <div class="especial-arriba">
+
+                    <div class="especial-card">
+
+                        <div class="foto-especial">
+                            <img src="imagenes/especial1.jpg">
+                        </div>
+
+                        <h3>Regalos</h3>
+
+                        <p>
+                            Un detalle dulce para sorprender
+                            a alguien especial.
+                        </p>
+
+                    </div>
+
+
+                    <div class="especial-card">
+
+                        <div class="foto-especial">
+                            <img src="imagenes/especial2.jpg">
+                        </div>
+
+                        <h3>Celebraciones</h3>
+
+                        <p>
+                            Haz que tus momentos importantes
+                            sean todavía más dulces.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRES ABAJO -->
+
+                <div class="especial-abajo">
+
+                    <div class="especial-mini">
+
+                        <img src="imagenes/especial3.jpg">
+
+                        <h3>Cumpleaños</h3>
+
+                        <p>
+                            Un pequeño detalle para un gran día.
+                        </p>
+
+                    </div>
+
+
+                    <div class="especial-mini">
+
+                        <img src="imagenes/especial4.jpg">
+
+                        <h3>Amistad</h3>
+
+                        <p>
+                            Comparte algo rico con tus amigos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="especial-mini">
+
+                        <img src="imagenes/especial5.jpg">
+
+                        <h3>Momentos</h3>
+
+                        <p>
+                            Crea recuerdos llenos de dulzura.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="numero">08</div>
+
+            </section>
+
+
+            <!-- =========================
+                 HOJA 9 - CONTACTO
+            ========================== -->
+
+            <section class="pagina contacto">
+
+                <div class="decoracion-contacto">
+                    ✦ 🍫 ✦
+                </div>
+
+                <div class="contacto-contenido">
+
+                    <p class="pequeno">
+                        ¿TE ANTOJASTE?
+                    </p>
+
+                    <h2>
+                        ¡Contáctanos!
+                    </h2>
+
+                    <p class="contacto-frase">
+                        Estamos felices de preparar
+                        algo delicioso para ti.
+                    </p>
+
+
+                    <div class="contacto-foto">
+
+                        <img src="imagenes/contacto.jpg"
+                             alt="Choco Sueños">
+
+                    </div>
+
+
+                    <div class="datos">
+
+                        <div class="dato">
+                            <span>📱</span>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p>999 999 999</p>
+                            </div>
+                        </div>
+
+
+                        <div class="dato">
+                            <span>📸</span>
+                            <div>
+                                <strong>Instagram</strong>
+                                <p>@chocosuenos</p>
+                            </div>
+                        </div>
+
+
+                        <div class="dato">
+                            <span>📍</span>
+                            <div>
+                                <strong>Encuéntranos</strong>
+                                <p>Tu dirección aquí</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="mensaje-final">
+                        🤎 Gracias por elegir Choco Sueños 🤎
+                    </div>
+
+                </div>
+
+                <div class="numero">09</div>
+
+            </section>
+
+
         </div>
 
-        <!-- CONTRAPORTADA -->
-        <div class="page back-page">
-          <div class="back-inner">
-            <div class="crown">♛</div>
-            <h2>ROMA</h2>
-            <div class="script">Chocolates</div>
-            <p class="back-message">Gracias por elegir<br>nuestro pequeño emprendimiento.</p>
-            <div class="contact-box">
-              <p>📱 WhatsApp</p>
-              <strong>922 866 922</strong>
-              <p>📍 Lima, Perú</p>
-              <p>📸 @roma.chocolates</p>
-            </div>
-            <p class="final-line">Chocotejas hechas con amor ♡</p>
-          </div>
-        </div>
-
-      </div>
     </div>
 
-    <div class="controls">
-      <button id="prevBtn" onclick="prevPage()">← Anterior</button>
-      <div class="dots" id="dots"></div>
-      <button id="nextBtn" onclick="nextPage()">Siguiente →</button>
-    </div>
-
-    <p class="hint">También puedes usar las teclas ← → del teclado.</p>
-  </main>
-
-  <footer>
-    <span>ROMA Chocolates</span> · Catálogo digital editable
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
