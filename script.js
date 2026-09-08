@@ -1,318 +1,184 @@
-```javascript
-/* =====================================================
-   CHOCO SUEÑOS
-   CATÁLOGO INTERACTIVO
-===================================================== */
-
-
-/* =====================================================
-   OBTENER ELEMENTOS
-===================================================== */
+// ===============================
+// CHOCO SUEÑOS - CATÁLOGO
+// ===============================
 
 const paginas = document.querySelectorAll(".pagina");
 
-const btnAnterior =
-    document.getElementById("btnAnterior");
-
-const btnSiguiente =
-    document.getElementById("btnSiguiente");
-
-const btnPortada =
-    document.getElementById("btnPortada");
-
-const indicador =
-    document.getElementById("indicador");
-
-
-/* =====================================================
-   VARIABLES
-===================================================== */
+const btnAnterior = document.getElementById("btnAnterior");
+const btnSiguiente = document.getElementById("btnSiguiente");
+const btnPortada = document.getElementById("btnPortada");
+const indicador = document.getElementById("indicador");
 
 let paginaActual = 0;
 
-const totalPaginas = paginas.length;
 
-let cambiando = false;
+// Mostrar página
+function mostrarPagina(numero) {
 
-
-/* =====================================================
-   MOSTRAR PÁGINA
-===================================================== */
-
-function mostrarPagina(nuevaPagina) {
-
-    if (cambiando) {
-        return;
+    if (numero < 0) {
+        numero = 0;
     }
 
-
-    if (nuevaPagina < 0) {
-        nuevaPagina = 0;
+    if (numero >= paginas.length) {
+        numero = paginas.length - 1;
     }
 
+    paginas.forEach((pagina, index) => {
 
-    if (nuevaPagina >= totalPaginas) {
-        nuevaPagina = totalPaginas - 1;
+        pagina.classList.remove("activa");
+
+        if (index === numero) {
+            pagina.classList.add("activa");
+        }
+
+    });
+
+    paginaActual = numero;
+
+    // Actualizar indicador
+    if (indicador) {
+        indicador.textContent =
+            `Página ${paginaActual + 1} de ${paginas.length}`;
     }
 
-
-    if (nuevaPagina === paginaActual) {
-        return;
+    // Activar/desactivar botones
+    if (btnAnterior) {
+        btnAnterior.disabled = paginaActual === 0;
     }
 
-
-    cambiando = true;
-
-
-    const paginaAnterior =
-        paginas[paginaActual];
-
-    const paginaNueva =
-        paginas[nuevaPagina];
+    if (btnSiguiente) {
+        btnSiguiente.disabled =
+            paginaActual === paginas.length - 1;
+    }
+}
 
 
-    /* SALIDA */
+// ===============================
+// BOTÓN SIGUIENTE
+// ===============================
 
-    paginaAnterior.classList.remove("activa");
+if (btnSiguiente) {
 
-    paginaAnterior.classList.add("saliendo");
+    btnSiguiente.addEventListener("click", function () {
 
+        if (paginaActual < paginas.length - 1) {
 
-    /* NUEVA PÁGINA */
+            mostrarPagina(paginaActual + 1);
 
-    paginaNueva.classList.add("activa");
+        }
 
-    paginaNueva.classList.add("entrando");
-
-
-    paginaActual = nuevaPagina;
-
-
-    actualizarIndicador();
-
-
-    setTimeout(() => {
-
-        paginaAnterior.classList.remove("saliendo");
-
-        paginaNueva.classList.remove("entrando");
-
-        cambiando = false;
-
-    }, 600);
+    });
 
 }
 
 
-/* =====================================================
-   SIGUIENTE
-===================================================== */
+// ===============================
+// BOTÓN ANTERIOR
+// ===============================
 
-function siguientePagina() {
+if (btnAnterior) {
 
-    if (paginaActual < totalPaginas - 1) {
+    btnAnterior.addEventListener("click", function () {
 
-        mostrarPagina(paginaActual + 1);
+        if (paginaActual > 0) {
 
-    }
+            mostrarPagina(paginaActual - 1);
 
-}
+        }
 
-
-/* =====================================================
-   ANTERIOR
-===================================================== */
-
-function anteriorPagina() {
-
-    if (paginaActual > 0) {
-
-        mostrarPagina(paginaActual - 1);
-
-    }
+    });
 
 }
 
 
-/* =====================================================
-   VOLVER A PORTADA
-===================================================== */
+// ===============================
+// VOLVER A PORTADA
+// ===============================
 
-function irAPortada() {
+if (btnPortada) {
 
-    if (paginaActual !== 0) {
+    btnPortada.addEventListener("click", function () {
+
+        mostrarPagina(0);
+
+    });
+
+}
+
+
+// ===============================
+// TECLADO
+// ===============================
+
+document.addEventListener("keydown", function (evento) {
+
+    if (evento.key === "ArrowRight") {
+
+        if (paginaActual < paginas.length - 1) {
+            mostrarPagina(paginaActual + 1);
+        }
+
+    }
+
+    if (evento.key === "ArrowLeft") {
+
+        if (paginaActual > 0) {
+            mostrarPagina(paginaActual - 1);
+        }
+
+    }
+
+    if (evento.key === "Home") {
 
         mostrarPagina(0);
 
     }
 
-}
+});
 
 
-/* =====================================================
-   INDICADOR
-===================================================== */
+// ===============================
+// DESLIZAR EN CELULAR
+// ===============================
 
-function actualizarIndicador() {
+let posicionInicial = 0;
+let posicionFinal = 0;
 
-    indicador.textContent =
-        `Página ${paginaActual + 1} de ${totalPaginas}`;
+document.addEventListener("touchstart", function (evento) {
 
+    posicionInicial = evento.touches[0].clientX;
 
-    /* DESACTIVAR BOTÓN ANTERIOR */
+});
 
-    if (paginaActual === 0) {
+document.addEventListener("touchend", function (evento) {
 
-        btnAnterior.style.opacity = "0.35";
+    posicionFinal = evento.changedTouches[0].clientX;
 
-        btnAnterior.style.cursor = "default";
+    const diferencia = posicionInicial - posicionFinal;
 
-    } else {
+    // Deslizar hacia la izquierda
+    if (diferencia > 50) {
 
-        btnAnterior.style.opacity = "1";
-
-        btnAnterior.style.cursor = "pointer";
-
-    }
-
-
-    /* DESACTIVAR BOTÓN SIGUIENTE */
-
-    if (paginaActual === totalPaginas - 1) {
-
-        btnSiguiente.style.opacity = "0.35";
-
-        btnSiguiente.style.cursor = "default";
-
-    } else {
-
-        btnSiguiente.style.opacity = "1";
-
-        btnSiguiente.style.cursor = "pointer";
-
-    }
-
-}
-
-
-/* =====================================================
-   EVENTOS DE LOS BOTONES
-===================================================== */
-
-btnSiguiente.addEventListener(
-    "click",
-    siguientePagina
-);
-
-
-btnAnterior.addEventListener(
-    "click",
-    anteriorPagina
-);
-
-
-btnPortada.addEventListener(
-    "click",
-    irAPortada
-);
-
-
-/* =====================================================
-   TECLADO
-===================================================== */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (event.key === "ArrowRight") {
-
-            siguientePagina();
-
-        }
-
-
-        if (event.key === "ArrowLeft") {
-
-            anteriorPagina();
-
-        }
-
-
-        if (event.key === "Home") {
-
-            irAPortada();
-
+        if (paginaActual < paginas.length - 1) {
+            mostrarPagina(paginaActual + 1);
         }
 
     }
-);
 
+    // Deslizar hacia la derecha
+    if (diferencia < -50) {
 
-/* =====================================================
-   DESLIZAR EN CELULAR
-===================================================== */
-
-let inicioX = 0;
-
-let finalX = 0;
-
-
-document.addEventListener(
-    "touchstart",
-    function(event) {
-
-        inicioX =
-            event.changedTouches[0].screenX;
-
-    },
-    { passive: true }
-);
-
-
-document.addEventListener(
-    "touchend",
-    function(event) {
-
-        finalX =
-            event.changedTouches[0].screenX;
-
-        detectarDeslizamiento();
-
-    },
-    { passive: true }
-);
-
-
-function detectarDeslizamiento() {
-
-    const distancia =
-        finalX - inicioX;
-
-
-    /* DESLIZAR HACIA LA IZQUIERDA */
-
-    if (distancia < -60) {
-
-        siguientePagina();
+        if (paginaActual > 0) {
+            mostrarPagina(paginaActual - 1);
+        }
 
     }
 
-
-    /* DESLIZAR HACIA LA DERECHA */
-
-    if (distancia > 60) {
-
-        anteriorPagina();
-
-    }
-
-}
+});
 
 
-/* =====================================================
-   INICIAR
-===================================================== */
+// ===============================
+// INICIAR CATÁLOGO
+// ===============================
 
-actualizarIndicador();
-```
+mostrarPagina(0);
