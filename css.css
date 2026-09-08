@@ -213,27 +213,24 @@ body {
 ===================================================== */
 
 .libro {
+    width: min(94vw, 1250px);
+    height: min(90vh, 850px);
 
-    width: min(1080px, 90vw);
+    min-height: 700px;
 
-    height: min(780px, 78vh);
+    margin: 20px auto;
 
-    min-height: 650px;
-
-    position: relative;
-
-    background: #fffaf5;
-
-    border-radius: 12px;
-
-    overflow: hidden;
+    background: #fff9f2;
+    border-radius: 25px;
 
     box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25),
+        0 5px 15px rgba(84, 43, 34, 0.2);
 
-        0 30px 70px rgba(68, 39, 30, .30),
+    position: relative;
+    overflow: hidden;
 
-        0 8px 20px rgba(68, 39, 30, .18);
-
+    border: 8px solid #542b22;
 }
 
 
@@ -242,79 +239,41 @@ body {
 ===================================================== */
 
 .pagina {
-
     position: absolute;
-
-    inset: 0;
 
     width: 100%;
-
     height: 100%;
 
-    padding: 55px 70px;
+    top: 0;
+    left: 0;
 
-    overflow: hidden;
+    padding: 45px 55px;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #fff9f2;
 
     opacity: 0;
-
     visibility: hidden;
 
-    transform: rotateY(-15deg) scale(.98);
-
-    transform-origin: left center;
+    transform: rotateY(-8deg) scale(0.98);
 
     transition:
-
-        opacity .45s ease,
-
-        transform .55s ease,
-
-        visibility .45s;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            rgba(130, 90, 70, .035) 1px,
-            transparent 1px
-        ),
-
-        var(--crema);
-
-    background-size: 5px 100%;
-
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        visibility 0.4s;
 }
-
-
-.pagina::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    bottom: 0;
-
-    left: 14px;
-
-    width: 2px;
-
-    background: rgba(120, 75, 55, .10);
-
-}
-
 
 .pagina.activa {
-
     opacity: 1;
-
     visibility: visible;
 
-    transform: rotateY(0) scale(1);
+    transform: rotateY(0deg) scale(1);
 
     z-index: 5;
-
 }
 
 
